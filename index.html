@@ -7,36 +7,36 @@
   <title>Martín Subirá — Director de Cine</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     /* ─────────────────────────────────────────
        TOKENS & RESET
     ───────────────────────────────────────── */
     :root {
-      /* Paleta cálida — piedra/arena patagónica */
-      --bg:          #dbd3c6;
-      --bg-2:        #d0c8ba;
-      --bg-3:        #c5bcad;
-      --surface:     #e4ddd1;
-      --border:      rgba(0,0,0,0.10);
-      --border-med:  rgba(0,0,0,0.18);
+      /* Paleta fría — noche patagónica, con brasa de atardecer como único acento */
+      --bg:          #10141a;
+      --bg-2:        #171c24;
+      --bg-3:        #1e2530;
+      --surface:     #171c24;
+      --border:      rgba(255,255,255,0.08);
+      --border-med:  rgba(255,255,255,0.18);
 
-      /* Texto — contrastes WCAG AA */
-      --text:        #1a1916;
-      --text-dim:    #2e2d28;
-      --text-muted:  #52504a;
+      /* Texto — blanco cálido tipo nieve/hielo, contrastes WCAG AA sobre fondo oscuro */
+      --text:        #f1ede4;
+      --text-dim:    #cbc4b6;
+      --text-muted:  #8a8375;
 
-      /* Acento principal: verde bosque (Patagonia) */
-      --accent:      #2c4a1e;
-      --accent-mid:  #3d6228;
-      --accent-light:#4d7a32;
-      --accent-dim:  rgba(44,74,30,0.08);
+      /* Acento único: brasa de atardecer (tomado de la foto del hero) */
+      --accent:      #c46a3a;
+      --accent-mid:  #b85a2c;
+      --accent-light:#d98a55;
+      --accent-dim:  rgba(196,106,58,0.14);
 
-      /* Dorado para premios */
-      --gold:        #7a5c1e;
-      --gold-light:  #9a7228;
-      --gold-dim:    rgba(122,92,30,0.09);
+      /* Ámbar para premios — misma familia cálida, más claro */
+      --gold:        #d9a24a;
+      --gold-light:  #e6b868;
+      --gold-dim:    rgba(217,162,74,0.12);
 
       /* Layout */
       --radius:      2px;
@@ -96,14 +96,14 @@
     nav:not(.scrolled) .hamburger span  { background: rgba(255,255,255,0.75); }
 
     nav.scrolled {
-      background: rgba(219,211,198,0.97);
+      background: rgba(16,20,26,0.94);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       box-shadow: 0 1px 0 var(--border);
     }
 
     .nav-logo {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-style: italic;
       font-size: 1.15rem;
       font-weight: 400;
@@ -179,7 +179,7 @@
     .mobile-menu.open { display: flex; }
 
     .mobile-menu a {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: clamp(2rem, 6vw, 3rem);
       color: var(--text-dim);
       transition: color var(--transition);
@@ -252,9 +252,10 @@
     }
 
     .hero-name {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
+      font-optical-sizing: auto;
       font-size: clamp(3.8rem, 11vw, 9.5rem);
-      font-weight: 400;
+      font-weight: 540;
       line-height: 0.95;
       letter-spacing: -0.01em;
       color: #ffffff;
@@ -263,11 +264,12 @@
 
     .hero-name em {
       font-style: italic;
-      color: rgba(255,255,255,0.72);
+      font-weight: 400;
+      color: var(--accent-light);
     }
 
     .hero-tagline {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: clamp(1rem, 2.2vw, 1.3rem);
       font-style: italic;
       color: rgba(255,255,255,0.5);
@@ -357,9 +359,10 @@
     }
 
     .section-title {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
+      font-optical-sizing: auto;
       font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.08;
       letter-spacing: -0.01em;
       color: var(--text);
@@ -368,7 +371,7 @@
 
     .section-title em {
       font-style: italic;
-      color: var(--text-muted);
+      color: var(--accent-light);
       font-weight: 400;
     }
 
@@ -424,7 +427,7 @@
     .about-text { padding-top: 0.5rem; }
 
     .about-bio {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: clamp(1.2rem, 2.2vw, 1.5rem);
       line-height: 1.7;
       color: var(--text-dim);
@@ -452,7 +455,7 @@
     }
 
     .stat-num {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: 2.6rem;
       font-weight: 400;
       color: var(--accent);
@@ -617,7 +620,7 @@
     }
 
     .film-title {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: 1.35rem;
       font-weight: 400;
       letter-spacing: 0em;
@@ -879,7 +882,7 @@
     }
 
     .press-headline {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: 1.15rem;
       font-weight: 400;
       letter-spacing: 0em;
@@ -891,7 +894,7 @@
     .press-card:hover .press-headline { color: var(--text); }
 
     .press-quote {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: 1rem;
       font-style: italic;
       line-height: 1.75;
@@ -985,7 +988,7 @@
     }
 
     .blog-title {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: clamp(1.4rem, 3vw, 1.9rem);
       font-weight: 400;
       letter-spacing: 0em;
@@ -1043,7 +1046,7 @@
     }
 
     .blog-card-title {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: 1.1rem;
       font-weight: 400;
       letter-spacing: 0em;
@@ -1122,7 +1125,7 @@
     .contact-info { padding-top: 0.5rem; }
 
     .contact-body {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-size: clamp(1rem, 2vw, 1.2rem);
       font-style: italic;
       line-height: 1.85;
@@ -1283,7 +1286,7 @@
     }
 
     .footer-logo {
-      font-family: 'Instrument Serif', serif;
+      font-family: 'Fraunces', serif;
       font-style: italic;
       font-size: 1.1rem;
       color: rgba(255,255,255,0.45);
