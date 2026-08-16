@@ -754,7 +754,12 @@
       padding: 0.1rem 0.4rem;
     }
 
-    .modal-inner.playlist-mode .modal-video-wrap { aspect-ratio: unset; }
+    .modal-inner.playlist-mode .modal-video-wrap {
+      aspect-ratio: unset;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
 
     /* Galería dentro del modal */
     .modal-gallery-section { background: #0a0a08; border: 1px solid rgba(255,255,255,0.07); border-top: none; padding: 0 1.5rem 1.5rem; }
